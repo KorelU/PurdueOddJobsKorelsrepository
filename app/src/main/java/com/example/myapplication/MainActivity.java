@@ -8,6 +8,19 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.google.api.client.*;
+import com.google.api.client.googleapis.*;
+import com.google.api.client.http.*;
+import com.google.api.*;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.security.GeneralSecurityException;
+import java.util.Collections;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
 //    @Override
@@ -36,13 +49,33 @@ public class MainActivity extends AppCompatActivity {
 
         txtFirstName.setText("First Name: " + edtTxtFirstName.getText().toString());
         txtLastName.setText("Last Name: " + edtTxtLastName.getText().toString());
-        txtEmail.setText("Email: " + edtTxtEmai aapcdl.getText().toString());
+        txtEmail.setText("Email: " + edtTxtEmail.getText().toString());
 
-        showMainPage();
+        goToMainPage();
     }
 
-    public void showMainPage() {
+    /**
+     * Button Action: Saves the user's input and switches view back to the main interface.
+     *
+     * Implemented: listing_form.xml
+     *
+     * @param view no idea what this does
+     */
+    public void submitForm(View view) {
+
+
+        goToMainPage();
+    }
+
+    public void newPostButton(View view) {
+        setContentView(R.layout.listing_form);
+    }
+
+    /**
+     * Method switches view to the main page.
+     */
+    public void goToMainPage() {
         setContentView(R.layout.mainpage);
-
     }
+
 }

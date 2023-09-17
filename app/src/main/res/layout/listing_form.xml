@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/submitForm"
+        android:layout_width="151dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="233dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFC107"
+        android:onClick="submitForm"
+        android:text="Add Listing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/submitForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listPostingTitle">
+
+        <EditText
+            android:id="@+id/jobTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:hint="Job Title" />
+
+        <EditText
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description" />
+
+        <EditText
+            android:id="@+id/rewardText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reward_in_dollars" />
+
+        <EditText
+            android:id="@+id/locationText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/where_will_you_meet_once_the_task_nis_complete" />
+
+        <EditText
+            android:id="@+id/phoneNumberText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_number" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/listPostingTitle"
+        android:layout_width="401dp"
+        android:layout_height="54dp"
+        android:background="#FFEB3B"
+        android:contentDescription="string/this_is_the_title_of_the_form"
+        android:gravity="center"
+        android:text="string/create_your_listing"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

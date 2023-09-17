@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="where_will_you_meet_once_the_task_nis_complete">Where will you meet once the task \nis complete?</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="reward_in_dollars">Reward (in dollars):</string>
+    <string name="description">Description</string>
 </resources>
